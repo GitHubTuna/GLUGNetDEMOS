@@ -12,6 +12,8 @@ namespace GLUGNetConsoleDEMO
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World.");
+            //https://github.com/MarkWithall/worlds-simplest-csharp-wpf-mvvm-example
+
         }
     }
 }
