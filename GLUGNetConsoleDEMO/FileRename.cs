@@ -20,7 +20,13 @@ namespace GLUGNetConsoleDEMO
             //Loop with LINQ as possible enhancement
             //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq
 
-            string FileLocation = @"C:\Fortuna";
+            string FileLocation = @"C:\GlugNetDEMO";
+
+            //Added code to check for directory existing as well.
+            if (!Directory.Exists(FileLocation))
+            {
+                Directory.CreateDirectory(FileLocation);
+            }
 
             //Initialize Files 
             for (int i = 1; i < 4; i++)
