@@ -12,6 +12,7 @@ namespace GLUGNetConsoleDEMO
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World.");
+            Console.ReadLine();
             //https://github.com/MarkWithall/worlds-simplest-csharp-wpf-mvvm-example
             //FYI You are not able to push anohter users project to your GITHUB page
 
