@@ -15,10 +15,12 @@ namespace GLUGNetConsoleDEMO
         public void RenameFiles()
 
         {
-            //Taylor watched me type this
-
             //Loop with LINQ as possible enhancement
             //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq
+
+            //Added code to check for case sentive differences using:
+            //https://stackoverflow.com/questions/444798/case-insensitive-containsstring
+            //https://stackoverflow.com/questions/6275980/string-replace-ignoring-case
 
             string FileLocation = @"C:\GlugNetDEMO";
 
