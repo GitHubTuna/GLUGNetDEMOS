@@ -10,6 +10,7 @@ namespace GLUGNetConsoleDEMO
 {
     class FileRename
     {
+        //This looks incorrect to me Jacob...
         public int TotalRecords = 0;
 
         public void RenameFiles()
