@@ -14,7 +14,6 @@ namespace GLUGNetConsoleDEMO
         public int TotalRecords = 0;
 
         public void RenameFiles()
-        //Ready for TM Presentation: Files are currently named "LESSON"
         {
             // @ makes "\" read as a directory
             string FileLocation = @"C:\Fortuna";
