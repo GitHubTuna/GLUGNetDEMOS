@@ -8,6 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace GLUGNetConsoleDEMO
 {
+//Jacob something went wrong!!!
     class FileRename
     {
         //This looks incorrect to me Jacob...
