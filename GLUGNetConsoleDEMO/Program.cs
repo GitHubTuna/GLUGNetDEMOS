@@ -11,11 +11,19 @@ namespace GLUGNetConsoleDEMO
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World.");
-            Console.ReadLine();
-            //https://github.com/MarkWithall/worlds-simplest-csharp-wpf-mvvm-example
-            //FYI You are not able to push anohter users project to your GITHUB page
+            //Future changes - Remove extra code in File Rename class.
+            //Add a UI
+            //Return Modified File Names as well as count.
 
+            //Added code to check for case sentive differences using:
+            //https://stackoverflow.com/questions/444798/case-insensitive-containsstring
+            //https://stackoverflow.com/questions/6275980/string-replace-ignoring-case
+
+            FileRename myFile = new FileRename();
+            myFile.RenameFiles();
+            Console.WriteLine(myFile.TotalRecords);
+            Console.ReadLine();
         }
     }
 }
+   
