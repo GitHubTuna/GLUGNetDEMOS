@@ -15,6 +15,8 @@ namespace GLUGNetConsoleDEMO
         public void RenameFiles()
 
         {
+            //Taylor watched me type this
+
             //Loop with LINQ as possible enhancement
             //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq
 
