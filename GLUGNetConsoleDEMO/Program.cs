@@ -11,6 +11,8 @@ namespace GLUGNetConsoleDEMO
     {
         static void Main(string[] args)
         {
+            //FortunaPhotos is now helping with this project
+
             //Future changes - Remove extra code in File Rename class.
             //Add a UI
             //Return Modified File Names as well as count.
