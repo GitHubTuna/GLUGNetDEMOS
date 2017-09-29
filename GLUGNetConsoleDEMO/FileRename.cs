@@ -24,14 +24,15 @@ namespace GLUGNetConsoleDEMO
 
             string FileLocation = @"C:\GlugNetDEMO";
 
+            //TEST ASUS COMMIT
+
             //Added code to check for directory existing as well.
             if (!Directory.Exists(FileLocation))
             {
                 Directory.CreateDirectory(FileLocation);
             }
-
             //Initialize Files 
-            for (int i = 1; i < 4; i++)
+            for (int i = 1; i < 100; i++)
             {
                 if (!File.Exists(FileLocation + @"\Text" + i + ".txt") && !File.Exists(FileLocation + @"\Jacob" + i + ".txt"))
                 {
@@ -63,7 +64,8 @@ namespace GLUGNetConsoleDEMO
 
                     if (filename.IndexOf (testString,0,StringComparison.CurrentCultureIgnoreCase)!=-1)
                     {
-                        string newfile = Regex.Replace(filename, testString,replaceString,RegexOptions.IgnoreCase);
+                        //File.Delete(file);
+                        string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
                         newfile = FileLocation + @"\" + newfile;
                         File.Move(file, newfile);
                         TotalRecords++;
