@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace GLUGNetConsoleDEMO
 {
@@ -15,26 +16,29 @@ namespace GLUGNetConsoleDEMO
         public void RenameFiles()
 
         {
-            string FileLocation = @"C:\GlugNetDEMO";
+            string fileLocation = @"C:\GlugNetDEMO";
 
             //Added code to check for directory existing as well.
-            if (!Directory.Exists(FileLocation))
+            if (!Directory.Exists(fileLocation))
             {
-                Directory.CreateDirectory(FileLocation);
+                Directory.CreateDirectory(fileLocation);
             }
+
+            Process.Start("explorer.exe", fileLocation);
+
             //Initialize Files 
             for (int i = 1; i < 100; i++)
             {
-                if (!File.Exists(FileLocation + @"\Text" + i + ".txt") && !File.Exists(FileLocation + @"\Jacob" + i + ".txt"))
+                if (!File.Exists(fileLocation + @"\Text" + i + ".txt") && !File.Exists(fileLocation + @"\Jacob" + i + ".txt"))
                 {
-                    File.Create(FileLocation + @"\Text" + i + ".txt").Close();
+                    File.Create(fileLocation + @"\Text" + i + ".txt").Close();
                     //Close is needed or the file will be locked when you try to move it
                 }
             }
 
-            if (Directory.Exists(FileLocation))
+            if (Directory.Exists(fileLocation))
             {   
-                foreach (var file in Directory.GetFiles(FileLocation))
+                foreach (var file in Directory.GetFiles(fileLocation))
                 {
                     string filename = new FileInfo(file).Name;
 
@@ -57,7 +61,7 @@ namespace GLUGNetConsoleDEMO
                     {
                         //File.Delete(file);
                         string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
-                        newfile = FileLocation + @"\" + newfile;
+                        newfile = fileLocation + @"\" + newfile;
                         File.Move(file, newfile);
                         TotalRecords++;
                     }  
