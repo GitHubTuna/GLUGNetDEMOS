@@ -59,6 +59,7 @@ namespace GLUGNetConsoleDEMO
 
                     if (filename.IndexOf (testString,0,StringComparison.CurrentCultureIgnoreCase)!=-1)
                     {
+                        //Add code during DEMO to allow this code to execute based on user input
                         //File.Delete(file);
                         string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
                         newfile = fileLocation + @"\" + newfile;
