@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace GLUGNetConsoleDEMO
 {
@@ -31,6 +32,9 @@ namespace GLUGNetConsoleDEMO
             {
                 Directory.CreateDirectory(FileLocation);
             }
+
+            Process.Start("explorer.exe", FileLocation);
+
             //Initialize Files 
             for (int i = 1; i < 100; i++)
             {
