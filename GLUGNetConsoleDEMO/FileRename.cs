@@ -14,14 +14,19 @@ namespace GLUGNetConsoleDEMO
         public int TotalRecords = 0;
 
         public void RenameFiles()
-
         {
+            bool isReset = false;
             string fileLocation = @"C:\GlugNetDEMO";
-
             //Added code to check for directory existing as well.
             if (!Directory.Exists(fileLocation))
             {
                 Directory.CreateDirectory(fileLocation);
+            }
+
+            Console.WriteLine("Type 'Y' to reset folders contents to nothing");
+            if (Console.ReadLine().ToUpper() == "Y")
+            {
+                isReset = true;
             }
 
             Process.Start("explorer.exe", fileLocation);
@@ -59,12 +64,17 @@ namespace GLUGNetConsoleDEMO
 
                     if (filename.IndexOf (testString,0,StringComparison.CurrentCultureIgnoreCase)!=-1)
                     {
-                        //Add code during DEMO to allow this code to execute based on user input
-                        //File.Delete(file);
-                        string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
-                        newfile = fileLocation + @"\" + newfile;
-                        File.Move(file, newfile);
-                        TotalRecords++;
+                        if(isReset)
+                        {
+                            File.Delete(file);
+                        }
+                        else
+                        {
+                            string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
+                            newfile = fileLocation + @"\" + newfile;
+                            File.Move(file, newfile);
+                            TotalRecords++;
+                        }
                     }  
                 }
             }
