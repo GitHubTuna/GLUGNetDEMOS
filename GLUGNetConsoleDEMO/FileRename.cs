@@ -25,9 +25,6 @@ namespace GLUGNetConsoleDEMO
 
             string fileLocation = @"C:\GlugNetDEMO";
 
-            //TEST ASUS COMMIT
-
-            //Added code to check for directory existing as well.
             if (!Directory.Exists(fileLocation))
             {
                 Directory.CreateDirectory(fileLocation);
@@ -35,7 +32,7 @@ namespace GLUGNetConsoleDEMO
 
             Process.Start("explorer.exe", fileLocation);
 
-            //Initialize Files 
+            //Create set of files to rename
             for (int i = 1; i < 100; i++)
             {
                 if (!File.Exists(fileLocation + @"\Text" + i + ".txt") && !File.Exists(fileLocation + @"\Jacob" + i + ".txt"))
