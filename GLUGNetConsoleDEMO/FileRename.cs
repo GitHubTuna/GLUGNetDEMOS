@@ -23,6 +23,14 @@ namespace GLUGNetConsoleDEMO
             //https://stackoverflow.com/questions/444798/case-insensitive-containsstring
             //https://stackoverflow.com/questions/6275980/string-replace-ignoring-case
 
+            bool removeFiles=false;
+
+            Console.WriteLine("Remove all text files created from this app from your PC? (Y/N)");
+            if (Console.ReadLine().ToUpper()=="Y")
+            {
+                removeFiles = true;
+            }
+
             string fileLocation = @"C:\GlugNetDEMO";
 
             if (!Directory.Exists(fileLocation))
@@ -65,11 +73,18 @@ namespace GLUGNetConsoleDEMO
 
                     if (filename.IndexOf (testString,0,StringComparison.CurrentCultureIgnoreCase)!=-1)
                     {
-                        //File.Delete(file);
-                        string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
-                        newfile = fileLocation + @"\" + newfile;
-                        File.Move(file, newfile);
-                        TotalRecords++;
+                        if (removeFiles)
+                        {
+                            File.Delete(file);
+                        }
+                        else
+                        {
+                            string newfile = Regex.Replace(filename, testString, replaceString, RegexOptions.IgnoreCase);
+                            newfile = fileLocation + @"\" + newfile;
+                            File.Move(file, newfile);
+                            TotalRecords++;
+                        }
+   
                     }  
                 }
             }
