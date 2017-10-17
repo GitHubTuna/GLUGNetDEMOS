@@ -23,7 +23,7 @@ namespace GLUGNetConsoleDEMO
                 Directory.CreateDirectory(fileLocation);
             }
 
-            Console.WriteLine("Type 'Y' to reset folders contents to nothing");
+            Console.WriteLine("Type 'Y' to reset folder's contents to nothing");
             if (Console.ReadLine().ToUpper() == "Y")
             {
                 isReset = true;
