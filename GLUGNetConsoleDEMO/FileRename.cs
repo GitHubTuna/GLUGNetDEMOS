@@ -1,4 +1,12 @@
-﻿namespace GLUGNetConsoleDEMO
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.IO;
+using System.Text.RegularExpressions;
+
+namespace GLUGNetConsoleDEMO
 {
     //References for working with Contains and Replace on text that has case sensitivity issues.
     //https://stackoverflow.com/questions/444798/case-insensitive-containsstring
