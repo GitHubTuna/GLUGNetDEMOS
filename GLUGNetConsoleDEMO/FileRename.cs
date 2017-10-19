@@ -11,6 +11,7 @@ namespace GLUGNetConsoleDEMO
 {
     class FileRename
     {
+        //Change to stop ability to move to MASTER
         public int TotalRecords = 0;
 
         public void RenameFiles()
